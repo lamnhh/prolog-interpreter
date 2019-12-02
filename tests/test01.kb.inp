@@ -115,8 +115,7 @@ grandson(GS,GP):-grandparent(GP,GS),male(GS).
 granddaughter(GD,GP):-grandparent(GP,GD),female(GD).
 sibling(A,B):-
 	father(Y,A),father(Y,B),
-	mother(X,A),mother(X,B),
-	A\=B.
+	mother(X,A),mother(X,B).
 brother(P,S):-sibling(P,S),male(P).
 sister(P,S):-sibling(P,S),female(P).
 aunt(P,N):-sister(P,X),parent(X,N).

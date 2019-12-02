@@ -1,4 +1,6 @@
 import argparse
+from controllers.Solver import Solver
+from models import KnowledgeBase
 
 
 def main():
@@ -28,3 +30,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # print(KnowledgeBase.merge_bindings)
