@@ -54,13 +54,10 @@ class Term:
         return str(self)
 
 
-# A predefined term used to represent facts as rules.
-# i.e. functor(argument1, argument2) for example gets translated to functor(argument1, argument2) :- TRUE
 class TRUE(Term):
     def __init__(self, functor="TRUE", arguments=None):
         super(TRUE, self).__init__(functor, arguments)
 
-    # Simply return our truth term since there is nothing to bind
     def substitute_variable_bindings(self, variable_bindings):
         return self
 
