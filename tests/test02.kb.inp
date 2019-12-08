@@ -42,9 +42,12 @@ one_rank_up(pantherinae,panthera).
 one_rank_up(felidae,felinae).
 one_rank_up(felidae,pantherinae).
 
-genus(X):-one_rank_up(X,S),species(S),!.
-subfamily(X):-one_rank_up(X,G),genus(G),!.
-family(X):-one_rank_up(X,SF),subfamily(SF),!.
+base_genus(X):-one_rank_up(X,S),species(S).
+genus(X):-setof(X,base_genus(X),XS),member(X,XS).
+base_subfamily(X):-one_rank_up(X,G),genus(G).
+subfamily(X):-setof(X,base_subfamily(X),XS),member(X,XS).
+base_family(X):-one_rank_up(X,SF),subfamily(SF).
+family(X):-setof(X,base_family(X),XS),member(X,XS).
 
 genus_species(S,G):-one_rank_up(G,S),species(S),genus(G).
 subfamily_species(S,SF):-one_rank_up(SF,G),genus_species(S,G),subfamily(SF).
@@ -55,9 +58,9 @@ family_genus(G,F):-one_rank_up(F,SF),subfamily_genus(G,SF),family(F).
 
 family_subfamily(SF,F):-one_rank_up(F,SF),subfamily(SF),family(F).
 
-same_genus(A,B):-genus_species(A,G),genus_species(B,G),A\=B.
-same_subfamily(A,B):-subfamily_species(A,SF),subfamily_species(B,SF),A\=B.
-same_subfamily(A,B):-subfamily_genus(A,SF),subfamily_genus(B,SF),A\=B.
-same_family(A,B):-family_species(A,F),family_species(B,F),A\=B.
-same_family(A,B):-family_genus(A,F),family_genus(B,F),A\=B.
-same_family(A,B):-family_subfamily(A,F),family_subfamily(B,F),A\=B.
+same_genus(A,B):-genus_species(A,G),genus_species(B,G).
+same_subfamily(A,B):-subfamily_species(A,SF),subfamily_species(B,SF).
+same_subfamily(A,B):-subfamily_genus(A,SF),subfamily_genus(B,SF).
+same_family(A,B):-family_species(A,F),family_species(B,F).
+same_family(A,B):-family_genus(A,F),family_genus(B,F).
+same_family(A,B):-family_subfamily(A,F),family_subfamily(B,F).

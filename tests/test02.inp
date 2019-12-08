@@ -1,40 +1,20 @@
-%1. Felis có phải là một genus không?
-genus(felis).
-%2. Liệt kê các subfamily?
-subfamily(X).
-%3. Pantherinae có phải là một family không?
-family(pantherinae).
-%4. Domestic Cat có thuộc genus felis không?
-genus_species(domestic_cat,felis).
-%5. Liệt kê các species thuộc subfamily felinae?
-subfamily_species(X,felinae).
-%6. Lion có thuộc family felidae không?
-family_species(lion,felidae).
-%7. Liệt kê các genus của subfamily Pantherinae.
-subfamily_genus(X,pantherinae).
-%8. Genus neofelis có thuộc family felidae không?
-family_genus(neofelis,felidae).
-%9. Pantherinae có phải một subfamily của family felidae không?
-family_subfamily(pantherinae,felidae).
-%10.Subfamily felinae thuộc family nào?
-family_subfamily(felinae,X).
-%11.Genus lynx thuộc subfamily nào?
-family_genus(lynx,X).
-%12.Tiger thuộc genus nào?
-genus_species(tiger,X).
-%13.Ocelot và oncilla có chung genus không?
-same_genus(ocelot,oncilla).
-%14.Liệt kê các species cùng genus với tiger?
-same_genus(tiger,X).
-%15.Leopard và oncilla có chùng chung subfamily không?
-same_subfamily(leopard,oncilla).
-%16.Genus felis và genus lynx có chung family không?
-same_family(felis,lynx).
-%17. Lion và eurasian lynx có cùng chung family không?
-same_family(lion,eurasian_lynx).
-%18. Lion có phải là tên một species không?
-species(lion).
-%19.Liệt kê các genus thuộc subfamily felinae?
-subfamily_genus(X,felinae).
-%20.Subfamily felinae và subfamily caninae có cùng chùng family không?
-same_family(felinae,caninae). 
+genus(felis). %1. Felis có phải là một genus không?
+subfamily(X). %2. Liệt kê các subfamily?
+family(pantherinae). %3. Pantherinae có phải là một family không?
+genus_species(domestic_cat,felis). %4. Domestic Cat có thuộc genus felis không?
+subfamily_species(X,felinae). %5. Liệt kê các species thuộc subfamily felinae?
+family_species(lion,felidae). %6. Lion có thuộc family felidae không?
+subfamily_genus(X,pantherinae). %7. Liệt kê các genus của subfamily Pantherinae.
+family_genus(neofelis,felidae). %8. Genus neofelis có thuộc family felidae không?
+family_subfamily(pantherinae,felidae). %9. Pantherinae có phải một subfamily của family felidae không?
+family_subfamily(felinae,X). %10.Subfamily felinae thuộc family nào?
+family_genus(lynx,X). %11.Genus lynx thuộc subfamily nào?
+genus_species(tiger,X). %12.Tiger thuộc genus nào?
+same_genus(ocelot,oncilla). %13.Ocelot và oncilla có chung genus không?
+same_genus(tiger,X). %14.Liệt kê các species cùng genus với tiger?
+same_subfamily(leopard,oncilla). %15.Leopard và oncilla có chùng chung subfamily không?
+same_family(felis,lynx). %16.Genus felis và genus lynx có chung family không?
+same_family(lion,eurasian_lynx). %17. Lion và eurasian lynx có cùng chung family không?
+species(lion). %18. Lion có phải là tên một species không?
+subfamily_genus(X,felinae). %19.Liệt kê các genus thuộc subfamily felinae?
+same_family(felinae,caninae). %20.Subfamily felinae và subfamily caninae có cùng chùng family không?

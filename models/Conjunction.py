@@ -8,15 +8,16 @@ class Conjunction(Term):
     def query(self, knowledge_base):
         def find_solutions(this, kb, argument_index, variable_bindings):
             if argument_index >= len(this.arguments):
+                # Found a solution, yield it
                 yield this.substitute_variable_bindings(variable_bindings)
             else:
                 current_term = this.arguments[argument_index]
                 for item in kb.query(current_term.substitute_variable_bindings(variable_bindings)):
+                    # Try a solution for argument_index, then backtrack
                     combined_variable_bindings = KnowledgeBase.merge_bindings(
                         current_term.match_variable_bindings(item),
                         variable_bindings
                     )
-
                     if combined_variable_bindings is not None:
                         yield from find_solutions(this, kb, argument_index + 1, combined_variable_bindings)
 

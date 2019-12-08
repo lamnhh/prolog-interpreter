@@ -1,40 +1,20 @@
-%1.Ai là chồng của nữ hoàng Elizabeth?
-husband(X,queen_elizabeth).
-%2.Công chúa Anne có phải là vợ của Timothy Laurence?
-wife(princess_anne,timothy_laurence).
-%3.Cha của Peter Phillips là ai?
-father(X,peter_phillips).
-%4.Liệt kê các cặp mẹ con?
-mother(X,Y).
-%5.Liệt kê các con của hoàng tử Phillip?
-child(X,prince_phillip).
-%6.Con trai của hoàng tử Andrew là ai?
-son(X,prince_andrew).
-%7.Zara Tindall có phải là con gái của hoàng tử Edward?
-daughter(zara_tindall,prince_edward).
-%8. Ông bà của công chúa Beatrice là ai?
-grandparent(X,princess_beatrice).
-%9. Elizabeth có phải là bà của hoàng tử Louis?
-grandmother(queen_elizabeth,prince_louis).
-%10.Ông của hoàng tử George là ai?
-grandfather(X,prince_george).
-%11.Công chúa Anne có cháu không?
-grandchild(X,princess_anne).
-%12.Cháu trai của hoàng tử Charles là ai?
-grandson(X,prince_charles).
-%13.Archie Harrison có phải là cháu trai của Diana?
-grandson(archie_harrison,diana).
-%14.Cháu gái của nữ hoàng Elizabeth là ai?
-granddaughter(X,queen_elizabeth).
-%15.Anh em của hoàng tử Charles là ai?
-sibling(X,prince_charles).
-%16.Louise Windsor có phải là anh trai của James không?
-brother(louise_windsor,james).
-%17.Chị/em gái của công chúa Beatrice là ai?
-sister(X,princess_beatrice).
-%18.Ai là cô của Zara Tindall?
-aunt(X,zara_tindall).
-%19.Cháu trai của hoàng tử Edward là ai?
-nephew(x,prince_edward).
-%20.Công chúa Charlotte có phải là cháu gái của hoàng tử Andrew?
-niece(princess_charlotte,prince_andrew).
+husband(X,queen_elizabeth). %1.Ai là chồng của nữ hoàng Elizabeth?
+wife(princess_anne,timothy_laurence). %2.Công chúa Anne có phải là vợ của Timothy Laurence?
+father(X,peter_phillips). %3.Cha của Peter Phillips là ai?
+mother(X,Y). %4.Liệt kê các cặp mẹ con?
+child(X,prince_phillip). %5.Liệt kê các con của hoàng tử Phillip?
+son(X,prince_andrew). %6.Con trai của hoàng tử Andrew là ai?
+daughter(zara_tindall,prince_edward). %7.Zara Tindall có phải là con gái của hoàng tử Edward?
+grandparent(X,princess_beatrice). %8. Ông bà của công chúa Beatrice là ai?
+grandmother(queen_elizabeth,prince_louis). %9. Elizabeth có phải là bà của hoàng tử Louis?
+grandfather(X,prince_george). %10.Ông của hoàng tử George là ai?
+grandchild(X,princess_anne). %11.Công chúa Anne có cháu không?
+grandson(X,prince_charles). %12.Cháu trai của hoàng tử Charles là ai?
+grandson(archie_harrison,diana). %13.Archie Harrison có phải là cháu trai của Diana?
+granddaughter(X,queen_elizabeth). %14.Cháu gái của nữ hoàng Elizabeth là ai?
+sibling(X,prince_charles). %15.Anh em của hoàng tử Charles là ai?
+brother(louise_windsor,james). %16.Louise Windsor có phải là anh trai của James không?
+sister(X,princess_beatrice). %17.Chị/em gái của công chúa Beatrice là ai?
+aunt(X,zara_tindall). %18.Ai là cô của Zara Tindall?
+nephew(x,prince_edward). %19.Cháu trai của hoàng tử Edward là ai?
+niece(princess_charlotte,prince_andrew). %20.Công chúa Charlotte có phải là cháu gái của hoàng tử Andrew?

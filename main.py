@@ -14,7 +14,7 @@ def main():
     kb_file.close()
 
     # Initialize solver
-    solver = Solver(knowledge_base=kb)
+    solver = Solver(knowledge_base_raw=kb)
 
     # Process queries
     if args.query_path is not None:
