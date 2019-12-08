@@ -3,7 +3,7 @@ from models import Conjunction, Variable, Term, Rule
 from models.Term import TRUE
 
 
-REGEX_TOKEN = "[A-Za-z0-9_]+|:\-|[()\.,]"
+REGEX_TOKEN = "[A-Za-z0-9_]+|:-|[().,]"
 REGEX_ATOM_NAME = "^[A-Za-z0-9_]+$"
 REGEX_VAR = "^[A-Z_][A-Za-z0-9_]*$"
 REGEX_COMMENT = r"(\".*?\"|\'.*?\')|(/\*.*?\*/|%[^\r\n]*$)"
@@ -52,7 +52,7 @@ class Parser:
             self.next()
             argument_list = []
             while self.current != ")":
-                argument_list.append(self.parse_term())
+                argument_list.append(self.parse_term()) 
                 if self.current not in (",", ")"):
                     raise Exception("Expected , or ) in term but got " + str(self.current))
                 if self.current == ",":

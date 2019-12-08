@@ -15,7 +15,6 @@ class KnowledgeBase:
             matching_head_var_bindings = rule.head.match_variable_bindings(goal)
 
             if matching_head_var_bindings is not None:
-
                 matched_head_item = rule.head.substitute_variable_bindings(matching_head_var_bindings)
                 matched_tail_item = rule.tail.substitute_variable_bindings(matching_head_var_bindings)
 
